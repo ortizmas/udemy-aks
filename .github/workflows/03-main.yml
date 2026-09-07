@@ -3,7 +3,7 @@ name: 04 Prd Deploy and Auto-Merge PR
 on:
   push:
     branches:
-      - homologacao
+      - main
 
 jobs:
   terraform-validation:
