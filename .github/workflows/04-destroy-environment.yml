@@ -48,6 +48,25 @@ jobs:
       with:
         terraform_version: 1.13.5
 
+    - name: Debug Terraform
+      run: |
+        echo "=== TERRAFORM DEBUG ==="
+
+        echo "Terraform path:"
+        which terraform
+
+        echo ""
+        echo "All Terraform executables:"
+        type -a terraform || true
+
+        echo ""
+        echo "Terraform version:"
+        terraform version
+
+        echo ""
+        echo "PATH:"
+        echo "$PATH"
+        
     - name: Terraform Initialize and Plan Destroy
       working-directory: terraform
       env:
