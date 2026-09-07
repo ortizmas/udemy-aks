@@ -3,7 +3,7 @@ name: 04 Prd Deploy and Auto-Merge PR
 on:
   push:
     branches:
-      - homologacao
+      - main
 
 jobs:
   terraform-validation:
@@ -58,7 +58,7 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
       with:
-        terraform_version: 1.6.0
+        terraform_version: 1.13.5
 
     - name: Pre-deployment validation
       run: |
